@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    parameters {
+        choice(name: 'action', choices: ['plan', 'apply', 'destroy'], description: 'Terraform action to run')
+    }
     stages {
         stage("terraform init") {
             steps {
