@@ -14,3 +14,4 @@ pipeline {
         sh "terraform ${params.action} --auto-approve"
     }
 }
+}
