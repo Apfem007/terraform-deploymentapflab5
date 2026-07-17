@@ -1,6 +1,6 @@
 #Creating Auto Scaling Group
 resource "aws_autoscaling_group" "web" {
-  name_prefix = "${aws_launch_template.web.name}-asg-"
+  name = "${aws_launch_template.web.name}-asg"
 
   min_size         = 3
   desired_capacity = 3
